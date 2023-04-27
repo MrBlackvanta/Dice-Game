@@ -12,6 +12,8 @@ const current1 = document.querySelector("#current--1");
 const currentScore = document.querySelectorAll(".current-score");
 const btnHold = document.querySelector(".btn--hold");
 const btnNew = document.querySelector(".btn--new");
+const closeBtn = document.querySelector(".close-modal");
+const overlay = document.querySelector(".overlay");
 
 let randomDice = Math.floor(Math.random() * 6) + 1;
 
@@ -89,4 +91,8 @@ btnNew.addEventListener("click", function () {
   point1 = 0;
   title0 = 0;
   title1 = 0;
+});
+
+closeBtn.addEventListener("click", function () {
+  overlay.classList.remove("show-overlay");
 });
